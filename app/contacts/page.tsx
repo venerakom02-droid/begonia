@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CONTACTS, SOCIAL_LINKS } from "@/lib/contacts";
 
 export const metadata: Metadata = {
-  title: "Контакты — BegoNia | Свяжитесь с нами",
+  title: "Контакты — БегоНия Venus | Свяжитесь с нами",
   description:
     "Telegram, WhatsApp, Max, email — выберите удобный способ связи. Отвечаем в течение дня.",
 };

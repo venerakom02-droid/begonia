@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Гарантия живого товара — BegoNia | Защита вашего растения",
+  title: "Гарантия живого товара — БегоНия Venus | Защита вашего растения",
   description:
-    "Фото перед отправкой, бережная упаковка, бесплатная замена при повреждении в пути и поддержка 30 дней после покупки. Гарантия BegoNia на каждое растение.",
+    "Фото перед отправкой, бережная упаковка, бесплатная замена при повреждении в пути и поддержка 30 дней после покупки. Гарантия БегоНия Venus на каждое растение.",
 };
 
 const GUARANTEE_CARDS = [
@@ -99,14 +99,14 @@ export default function GuaranteesPage() {
             className="text-cream text-xl sm:text-2xl leading-relaxed mb-4"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            &laquo;Каждое растение BegoNia защищено нашей гарантией. Мы
+            &laquo;Каждое наше растение защищено нашей гарантией. Мы
             фотографируем его перед отправкой, упаковываем с максимальной
             заботой и берём на себя все риски транспортировки. Если растение
             пострадало в пути —{" "}
             <span className="text-gold">мы заменим его бесплатно.</span>&raquo;
           </p>
           <footer className="text-cream/40 text-sm tracking-wide uppercase">
-            — Команда BegoNia
+            — Команда БегоНия Venus
           </footer>
         </blockquote>
       </section>

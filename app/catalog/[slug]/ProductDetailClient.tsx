@@ -319,7 +319,7 @@ function WhatsIncluded({ product }: { product: Product }) {
     },
     {
       icon: "\u{1F381}",
-      title: "Бонус: стикер BegoNia",
+      title: "Бонус: стикер БегоНия Venus",
       desc: "Коллекционный стикер с иллюстрацией бегонии в каждом заказе",
     },
   ];

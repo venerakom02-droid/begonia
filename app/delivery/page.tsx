@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Доставка и оплата — BegoNia | Бережная доставка растений по России",
+  title: "Доставка и оплата — БегоНия Venus | Бережная доставка растений по России",
   description:
     "СДЭК, Почта России, Яндекс Доставка, самовывоз. Термоупаковка, бережная упаковка с мхом и жёстким коробом. Оплата картой, СБП, ЮMoney.",
 };
