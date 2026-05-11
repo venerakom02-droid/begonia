@@ -1,40 +1,47 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CONTACTS, SOCIAL_LINKS } from "@/lib/contacts";
 
 export const metadata: Metadata = {
   title: "Контакты — BegoNia | Свяжитесь с нами",
   description:
-    "Telegram, WhatsApp, email — выберите удобный способ связи. Время работы: Пн-Пт 10:00-19:00, Сб 11:00-16:00.",
+    "Telegram, WhatsApp, Max, email — выберите удобный способ связи. Отвечаем в течение дня.",
 };
 
-const CONTACT_CARDS = [
+const CONTACT_CARDS: {
+  icon: string;
+  title: string;
+  value: string;
+  link: string | null;
+  note: string;
+}[] = [
   {
     icon: "✈",
     title: "Telegram",
-    value: "@begonia_shop",
-    link: "#",
+    value: `@${CONTACTS.orderTelegram}`,
+    link: `https://t.me/${CONTACTS.orderTelegram}`,
     note: "Самый быстрый способ связи",
   },
   {
     icon: "💬",
     title: "WhatsApp",
-    value: "+7 (999) 123-45-67",
-    link: "#",
+    value: CONTACTS.phoneDisplay,
+    link: SOCIAL_LINKS.whatsapp,
     note: "Для заказов и консультаций",
+  },
+  {
+    icon: "📱",
+    title: "Max",
+    value: CONTACTS.phoneDisplay,
+    link: SOCIAL_LINKS.max,
+    note: "Российский мессенджер",
   },
   {
     icon: "✉",
     title: "Email",
-    value: "hello@begonia.ru",
-    link: "mailto:hello@begonia.ru",
+    value: CONTACTS.email,
+    link: `mailto:${CONTACTS.email}`,
     note: "Ответ в течение 24 часов",
-  },
-  {
-    icon: "⏱",
-    title: "Время обработки",
-    value: "1–3 рабочих дня",
-    link: null,
-    note: "Заказы обрабатываются ежедневно",
   },
 ];
 
@@ -190,18 +197,25 @@ export default function ContactsPage() {
             {/* Social links */}
             <div className="flex gap-4">
               <a
-                href="#"
+                href={SOCIAL_LINKS.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-ghost flex-1 text-center"
               >
                 Telegram-канал
               </a>
               <a
-                href="#"
+                href={SOCIAL_LINKS.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-ghost flex-1 text-center"
               >
-                Группа VK
+                YouTube
               </a>
             </div>
+            <Link href="/cart" className="btn-primary w-full">
+              Оформить предзаказ
+            </Link>
           </div>
         </div>
       </section>
