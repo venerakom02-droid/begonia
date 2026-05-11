@@ -12,9 +12,9 @@ export function generateStaticParams() {
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
   const { slug } = await props.params;
   const product = products.find((p) => p.slug === slug);
-  if (!product) return { title: "Сорт не найден — BegoNia" };
+  if (!product) return { title: "Сорт не найден — Бегония Venus" };
   return {
-    title: `${product.nameRu} — BegoNia`,
+    title: `${product.nameRu} — Бегония Venus`,
     description: product.description.slice(0, 160),
   };
 }
