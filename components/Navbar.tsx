@@ -72,30 +72,22 @@ export default function Navbar() {
             </svg>
           </button>
 
-          {/* Cart */}
+          {/* Предзаказ */}
           <Link
             href="/cart"
-            className="relative flex items-center justify-center w-9 h-9 rounded-full border border-gold/30 text-cream/60 hover:text-gold hover:border-gold hover:shadow-[0_0_12px_rgba(201,164,74,0.2)] transition-all duration-300"
-            aria-label="Корзина"
+            className="hidden sm:inline-flex items-center justify-center h-9 px-4 rounded-full border border-gold/40 text-cream/80 text-[10px] uppercase tracking-[2px] hover:text-gold hover:border-gold hover:shadow-[0_0_12px_rgba(201,164,74,0.2)] transition-all duration-300"
+            aria-label="Оформить предзаказ"
+          >
+            Предзаказ
+          </Link>
+          <Link
+            href="/cart"
+            className="sm:hidden flex items-center justify-center w-9 h-9 rounded-full border border-gold/30 text-cream/60 hover:text-gold hover:border-gold transition-all duration-300"
+            aria-label="Оформить предзаказ"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18" />
               <path d="M16 10a4 4 0 01-8 0" />
-            </svg>
-            <span className="absolute -top-1 -right-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold text-night text-[9px] font-bold">
-              0
-            </span>
-          </Link>
-
-          {/* Account */}
-          <Link
-            href="/account"
-            className="flex items-center justify-center w-9 h-9 rounded-full border border-gold/30 text-cream/60 hover:text-gold hover:border-gold hover:shadow-[0_0_12px_rgba(201,164,74,0.2)] transition-all duration-300"
-            aria-label="Аккаунт"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
             </svg>
           </Link>
 

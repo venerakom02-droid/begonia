@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SOCIAL_LINKS, CONTACTS } from "@/lib/contacts";
 
 const CATALOG_LINKS = [
   { href: "/catalog?type=rex", label: "Рексы" },
@@ -24,10 +25,9 @@ const HELP_LINKS = [
 ];
 
 const SOCIALS = [
-  { label: "TG", href: "#", icon: "\u2708" },
-  { label: "VK", href: "#", icon: "\u{1F310}" },
-  { label: "YT", href: "#", icon: "\u25B6" },
-  { label: "IG", href: "#", icon: "\u{1F4F7}" },
+  { label: "Telegram", href: SOCIAL_LINKS.telegram, icon: "\u2708" },
+  { label: "YouTube", href: SOCIAL_LINKS.youtube, icon: "\u25B6" },
+  { label: "WhatsApp", href: SOCIAL_LINKS.whatsapp, icon: "\uD83D\uDCAC" },
 ];
 
 export default function Footer() {
@@ -54,12 +54,28 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={s.label}
                   className="flex items-center justify-center w-8 h-8 rounded-full border border-gold/25 text-cream/40 text-xs hover:text-gold hover:border-gold transition-all duration-300"
                 >
                   {s.icon}
                 </a>
               ))}
+            </div>
+            <div className="mt-4 flex flex-col gap-1 text-xs text-cream/40">
+              <a
+                href={`tel:+${CONTACTS.phone}`}
+                className="hover:text-gold transition-colors duration-300"
+              >
+                {CONTACTS.phoneDisplay}
+              </a>
+              <a
+                href={`mailto:${CONTACTS.email}`}
+                className="hover:text-gold transition-colors duration-300"
+              >
+                {CONTACTS.email}
+              </a>
             </div>
           </div>
 

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Корзина — BegoNia | Оформление заказа",
+  title: "Предзаказ — BegoNia | Оставьте заявку",
   description:
-    "Ваша корзина с коллекционными бегониями. Оформите заказ с термоупаковкой и бережной доставкой по России.",
+    "Оформите предзаказ коллекционных бегоний. Заявка отправляется напрямую в Telegram, мы свяжемся для подтверждения наличия и согласования доставки.",
 };
 
 export default function CartLayout({ children }: { children: React.ReactNode }) {

@@ -159,9 +159,12 @@ export default function ProductDetailClient({ product, similar, typeLabel }: Pro
                   +
                 </button>
               </div>
-              <button className="btn-primary flex-1 max-w-[320px]">
+              <Link
+                href={`/cart?product=${encodeURIComponent(`${product.nameRu} (${FORMAT_RU[product.format] || product.format}) — ${qty} шт.`)}`}
+                className="btn-primary flex-1 max-w-[320px]"
+              >
                 {product.status === "preorder" ? "Оформить предзаказ" : "Заказать"}&ensp;&rarr;
-              </button>
+              </Link>
             </div>
 
             {/* Bonus points */}
