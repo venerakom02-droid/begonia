@@ -42,7 +42,7 @@ export default function Footer() {
                 className="uppercase tracking-[4px] text-cream"
                 style={{ fontFamily: "var(--font-display)", fontSize: "20px" }}
               >
-                Бегония&nbsp;<span className="text-gold">Venus</span>
+                БегоНия&nbsp;<span className="text-gold">Venus</span>
               </span>
             </Link>
             <p className="mt-4 text-cream/40 text-sm leading-relaxed max-w-xs">
@@ -151,7 +151,7 @@ export default function Footer() {
       <div className="border-t border-leaf/10">
         <div className="mx-auto max-w-7xl px-6 py-5 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
           <p className="text-cream/25 text-xs tracking-wide">
-            &copy; 2026 Бегония Venus. Все права защищены.
+            &copy; 2026 БегоНия Venus. Все права защищены.
           </p>
           <Link
             href="/privacy"

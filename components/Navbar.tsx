@@ -36,7 +36,7 @@ export default function Navbar() {
             className="uppercase tracking-[4px] text-cream"
             style={{ fontFamily: "var(--font-display)", fontSize: "22px" }}
           >
-            Бегония&nbsp;<span className="text-gold">Venus</span>
+            БегоНия&nbsp;<span className="text-gold">Venus</span>
           </span>
           <span className="text-cream/40 uppercase tracking-[2.5px]" style={{ fontSize: "8px" }}>
             Коллекционные бегонии

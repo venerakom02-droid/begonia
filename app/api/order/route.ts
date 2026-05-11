@@ -41,7 +41,7 @@ function escapeHtml(value: string): string {
 
 function formatMessage(payload: OrderPayload): string {
   const lines: string[] = [];
-  lines.push("🌿 <b>Новая заявка с сайта Бегония Venus</b>");
+  lines.push("🌿 <b>Новая заявка с сайта БегоНия Venus</b>");
   lines.push("");
   lines.push(`<b>Имя:</b> ${escapeHtml(payload.name)}`);
   lines.push(`<b>Телефон:</b> ${escapeHtml(payload.phone)}`);
