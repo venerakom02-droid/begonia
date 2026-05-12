@@ -333,9 +333,9 @@ export const products: Product[] = [
   },
   {
     id: 'p10',
-    slug: 'ds-ognennyj-zakat',
-    nameRu: 'DS-Огненный закат',
-    nameLatin: "Begonia rex 'DS-Ognennyj Zakat'",
+    slug: 'ds-rozhdenie-ognya',
+    nameRu: 'DS Рождение огня',
+    nameLatin: "Begonia rex 'DS Rozhdenie Ognya'",
     series: 'DS',
     type: 'rex',
     format: 'baby',
@@ -353,11 +353,11 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: false,
     mini: false,
-    images: ['/images/ds-ognennyj-zakat-1.jpg', '/images/ds-ognennyj-zakat-2.jpg'],
+    images: ['/ds-rozhdenie-ognya-1.png'],
     description:
-      'Новинка серии DS — яркие листья с переходом от огненно-красного центра к малиновому краю через оранжевые и розовые тона. Каждый лист уникален, как настоящий закат.',
+      'Яркий сорт серии DS с насыщёнными винно-малиновыми листьями, серебристо-розовыми вспышками и выразительной тёмной каймой. Контрастный рисунок делает куст нарядным и очень заметным в коллекции.',
     careInstructions:
-      'Сорт DS-серии, адаптированный к комнатным условиям. Стандартный уход для рексов. Яркость окраски зависит от уровня освещения — при недостатке света листья бледнеют.',
+      'Сорт DS-серии, адаптированный к комнатным условиям. Любит яркий рассеянный свет, при котором окраска проявляется особенно эффектно. Стандартный уход для рексов: умеренный полив, воздух без пересушки и рыхлый субстрат.',
     bonusPoints: 45,
   },
   {

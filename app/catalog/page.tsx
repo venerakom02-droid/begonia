@@ -110,7 +110,7 @@ const SLUG_EMOJI: Record<string, string> = {
   "silver-limbo": "🪞",
   maculata: "⚫",
   listada: "🌿",
-  "ds-ognennyj-zakat": "🌅",
+  "ds-rozhdenie-ognya": "🌅",
   darthvaderiana: "🖤",
   "pavlinij-hvost": "🦚",
 };
@@ -125,7 +125,7 @@ const SLUG_GRADIENT: Record<string, string> = {
   "silver-limbo": "from-slate-700/50 via-purple-900/30 to-indigo-900/50",
   maculata: "from-green-900/60 via-red-900/20 to-emerald-950/60",
   listada: "from-green-900/60 via-lime-900/30 to-emerald-950/60",
-  "ds-ognennyj-zakat": "from-red-900/50 via-orange-800/30 to-amber-950/50",
+  "ds-rozhdenie-ognya": "from-red-900/50 via-orange-800/30 to-amber-950/50",
   darthvaderiana: "from-gray-950/70 via-purple-950/30 to-black/80",
   "pavlinij-hvost": "from-blue-950/60 via-indigo-900/40 to-green-950/60",
 };
