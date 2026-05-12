@@ -419,6 +419,35 @@ export const products: Product[] = [
       'Идеальна для начинающих. Выносит кратковременное пересыхание и пониженную влажность. Стандартный грунт для бегоний, полив по мере просыхания.',
     bonusPoints: 38,
   },
+  {
+    id: 'p13',
+    slug: 'charovnitsa',
+    nameRu: 'Чаровница',
+    nameLatin: "Begonia rex 'Charovnitsa'",
+    series: '',
+    type: 'rex',
+    format: 'baby',
+    price: 500,
+    stock: 3,
+    status: 'in-stock',
+    difficulty: 'easy',
+    light: 'Рассеянный свет',
+    water: 'Умеренный',
+    humidity: '55-70%',
+    temperature: '18-24 °C',
+    petSafe: false,
+    isNew: true,
+    isRare: false,
+    iridescent: false,
+    terrarium: false,
+    mini: false,
+    images: ['/charovnitsa-1.png'],
+    description:
+      'Эффектный рекс с крупными резными листьями: серебристо-белый рисунок с малиново-розовой звездой в центре и тёмно-винной волнистой каймой. Контрастная окраска делает куст по-настоящему нарядным.',
+    careInstructions:
+      'Любит яркий рассеянный свет и стабильную влажность 55–70%. Полив умеренный, без застоя воды. Грунт рыхлый, на основе торфа и перлита.',
+    bonusPoints: 50,
+  },
 ];
 
 // ── CATEGORIES ──
