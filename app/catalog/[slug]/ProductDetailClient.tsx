@@ -8,7 +8,7 @@ import type { Product } from "@/lib/data";
 const SLUG_EMOJI: Record<string, string> = {
   fireworks: "\u{1F386}", "iron-cross": "\u2720\uFE0F", escargot: "\u{1F300}", luxurians: "\u{1F334}",
   brevirimosa: "\u{1F48E}", "ds-lunnyj-svet": "\u{1F319}", "silver-limbo": "\u{1FA9E}",
-  maculata: "\u26AB", listada: "\u{1F33F}", "ds-ognennyj-zakat": "\u{1F305}",
+  maculata: "\u26AB", listada: "\u{1F33F}", "ds-rozhdenie-ognya": "\u{1F305}",
   darthvaderiana: "\u{1F5A4}", "pavlinij-hvost": "\u{1F99A}",
 };
 const SLUG_GRADIENT: Record<string, string> = {
@@ -21,7 +21,7 @@ const SLUG_GRADIENT: Record<string, string> = {
   "silver-limbo": "from-slate-700/50 via-purple-900/30 to-indigo-900/50",
   maculata: "from-green-900/60 via-red-900/20 to-emerald-950/60",
   listada: "from-green-900/60 via-lime-900/30 to-emerald-950/60",
-  "ds-ognennyj-zakat": "from-red-900/50 via-orange-800/30 to-amber-950/50",
+  "ds-rozhdenie-ognya": "from-red-900/50 via-orange-800/30 to-amber-950/50",
   darthvaderiana: "from-gray-950/70 via-purple-950/30 to-black/80",
   "pavlinij-hvost": "from-blue-950/60 via-indigo-900/40 to-green-950/60",
 };
@@ -66,9 +66,17 @@ export default function ProductDetailClient({ product, similar, typeLabel }: Pro
             <div
               className={`aspect-square w-full bg-gradient-to-br ${gradient} flex items-center justify-center border border-leaf/20 overflow-hidden`}
             >
-              <span className="text-[160px] md:text-[200px] opacity-[0.2] select-none pointer-events-none">
-                {emoji}
-              </span>
+              {product.images[0] ? (
+                <img
+                  src={product.images[0]}
+                  alt={product.nameRu}
+                  className="h-full w-full object-contain bg-white"
+                />
+              ) : (
+                <span className="text-[160px] md:text-[200px] opacity-[0.2] select-none pointer-events-none">
+                  {emoji}
+                </span>
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-night/30 to-transparent pointer-events-none" />
             </div>
             {/* Badges on photo */}
@@ -373,9 +381,17 @@ function SimilarProducts({ similar }: { similar: Product[] }) {
               >
                 {/* Image area */}
                 <div className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${gr}`}>
-                  <span className="absolute inset-0 flex items-center justify-center text-[80px] opacity-[0.12] select-none pointer-events-none">
-                    {em}
-                  </span>
+                  {p.images[0] ? (
+                    <img
+                      src={p.images[0]}
+                      alt={p.nameRu}
+                      className="h-full w-full object-cover bg-white"
+                    />
+                  ) : (
+                    <span className="absolute inset-0 flex items-center justify-center text-[80px] opacity-[0.12] select-none pointer-events-none">
+                      {em}
+                    </span>
+                  )}
                   {p.isRare && <span className="absolute top-3 left-3 badge-rare">Редкий</span>}
                   {!p.isRare && p.isNew && <span className="absolute top-3 left-3 badge-new">Новинка</span>}
                 </div>

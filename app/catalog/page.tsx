@@ -15,8 +15,12 @@ function ProductCard({ product, viewMode }: { product: Product; viewMode: "grid"
         href={`/catalog/${product.slug}`}
         className="group flex gap-4 bg-forest/40 border border-leaf/15 hover:border-gold/40 transition-all duration-300 p-3"
       >
-        <div className={`w-28 h-28 shrink-0 bg-gradient-to-br ${grad} flex items-center justify-center text-4xl opacity-80`}>
-          {emoji}
+        <div className={`w-28 h-28 shrink-0 bg-gradient-to-br ${grad} overflow-hidden`}>
+          {product.images[0] ? (
+            <img src={product.images[0]} alt={product.nameRu} className="h-full w-full object-cover bg-white" />
+          ) : (
+            <div className="h-full w-full flex items-center justify-center text-4xl opacity-80">{emoji}</div>
+          )}
         </div>
         <div className="flex-1 min-w-0 flex flex-col justify-between py-1">
           <div>
@@ -48,7 +52,11 @@ function ProductCard({ product, viewMode }: { product: Product; viewMode: "grid"
       className="group bg-forest/40 border border-leaf/15 hover:border-gold/40 transition-all duration-300 hover:-translate-y-1 flex flex-col"
     >
       <div className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${grad} flex items-center justify-center`}>
-        <span className="text-[72px] opacity-[0.15] select-none pointer-events-none">{emoji}</span>
+        {product.images[0] ? (
+          <img src={product.images[0]} alt={product.nameRu} className="h-full w-full object-cover bg-white" />
+        ) : (
+          <span className="text-[72px] opacity-[0.15] select-none pointer-events-none">{emoji}</span>
+        )}
         {product.isRare && <span className="absolute top-3 left-3 badge-rare">Редкий</span>}
         {!product.isRare && product.isNew && <span className="absolute top-3 left-3 badge-new">Новинка</span>}
         {!product.isRare && !product.isNew && product.stock <= 1 && product.status === "in-stock" && (
@@ -110,7 +118,7 @@ const SLUG_EMOJI: Record<string, string> = {
   "silver-limbo": "🪞",
   maculata: "⚫",
   listada: "🌿",
-  "ds-ognennyj-zakat": "🌅",
+  "ds-rozhdenie-ognya": "🌅",
   darthvaderiana: "🖤",
   "pavlinij-hvost": "🦚",
 };
@@ -125,7 +133,7 @@ const SLUG_GRADIENT: Record<string, string> = {
   "silver-limbo": "from-slate-700/50 via-purple-900/30 to-indigo-900/50",
   maculata: "from-green-900/60 via-red-900/20 to-emerald-950/60",
   listada: "from-green-900/60 via-lime-900/30 to-emerald-950/60",
-  "ds-ognennyj-zakat": "from-red-900/50 via-orange-800/30 to-amber-950/50",
+  "ds-rozhdenie-ognya": "from-red-900/50 via-orange-800/30 to-amber-950/50",
   darthvaderiana: "from-gray-950/70 via-purple-950/30 to-black/80",
   "pavlinij-hvost": "from-blue-950/60 via-indigo-900/40 to-green-950/60",
 };

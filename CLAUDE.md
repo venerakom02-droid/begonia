@@ -53,6 +53,12 @@ TELEGRAM_CHAT_ID=<числовой_chat_id_владельца>
 4. В Vercel → Project → Settings → Environment Variables → добавить `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID`
 5. Redeploy
 
+## Как добавить фото сорту
+1. Положить файл картинки в `public/` (например `public/ds-rozhdenie-ognya-1.png`)
+2. В `lib/data.ts` у нужного сорта прописать путь: `images: ['/ds-rozhdenie-ognya-1.png']`
+3. Всё — каталог, карточка сорта и блок похожих сортов сами покажут фото вместо эмодзи-заглушки
+4. Если у сорта `images: []` — остаётся эмодзи-заглушка
+
 ## Важные детали
 - Сайт **статичный**, кроме `/api/order` (динамический). 28 страниц prerender в build.
 - Главная — `app/page.tsx` (520 строк, длинный лендинг)
