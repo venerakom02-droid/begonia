@@ -4,6 +4,8 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { products, categories, type Product } from "@/lib/data";
 
+const PHOTO_SLUGS = new Set(["ds-rozhdenie-ognya"]);
+
 /* ── ProductCard ── */
 function ProductCard({ product, viewMode }: { product: Product; viewMode: "grid" | "list" }) {
   const emoji = product.type === "rex" ? "\u{1F33F}" : product.type === "cane" ? "\u{1F331}" : "\u{1FAB4}";
@@ -15,8 +17,12 @@ function ProductCard({ product, viewMode }: { product: Product; viewMode: "grid"
         href={`/catalog/${product.slug}`}
         className="group flex gap-4 bg-forest/40 border border-leaf/15 hover:border-gold/40 transition-all duration-300 p-3"
       >
-        <div className={`w-28 h-28 shrink-0 bg-gradient-to-br ${grad} flex items-center justify-center text-4xl opacity-80`}>
-          {emoji}
+        <div className={`w-28 h-28 shrink-0 bg-gradient-to-br ${grad} overflow-hidden`}>
+          {PHOTO_SLUGS.has(product.slug) ? (
+            <img src={product.images[0]} alt={product.nameRu} className="h-full w-full object-cover bg-white" />
+          ) : (
+            <div className="h-full w-full flex items-center justify-center text-4xl opacity-80">{emoji}</div>
+          )}
         </div>
         <div className="flex-1 min-w-0 flex flex-col justify-between py-1">
           <div>
@@ -48,7 +54,11 @@ function ProductCard({ product, viewMode }: { product: Product; viewMode: "grid"
       className="group bg-forest/40 border border-leaf/15 hover:border-gold/40 transition-all duration-300 hover:-translate-y-1 flex flex-col"
     >
       <div className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${grad} flex items-center justify-center`}>
-        <span className="text-[72px] opacity-[0.15] select-none pointer-events-none">{emoji}</span>
+        {PHOTO_SLUGS.has(product.slug) ? (
+          <img src={product.images[0]} alt={product.nameRu} className="h-full w-full object-cover bg-white" />
+        ) : (
+          <span className="text-[72px] opacity-[0.15] select-none pointer-events-none">{emoji}</span>
+        )}
         {product.isRare && <span className="absolute top-3 left-3 badge-rare">Редкий</span>}
         {!product.isRare && product.isNew && <span className="absolute top-3 left-3 badge-new">Новинка</span>}
         {!product.isRare && !product.isNew && product.stock <= 1 && product.status === "in-stock" && (
