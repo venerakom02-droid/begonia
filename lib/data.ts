@@ -92,7 +92,7 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: false,
     mini: false,
-    images: ['/images/fireworks-1.jpg', '/images/fireworks-2.jpg'],
+    images: [],
     description:
       'Эффектная рексовая бегония с серебристо-лавандовыми листьями и контрастными тёмно-зелёными прожилками. При боковом освещении рисунок напоминает вспышки фейерверка — отсюда и название сорта.',
     careInstructions:
@@ -121,7 +121,7 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: false,
     mini: false,
-    images: ['/images/iron-cross-1.jpg', '/images/iron-cross-2.jpg'],
+    images: [],
     description:
       'Легендарная бегония Мэсона с текстурными бугристыми листьями ярко-зелёного цвета и характерным тёмно-коричневым рисунком в форме мальтийского креста. Настоящая классика коллекции.',
     careInstructions:
@@ -150,7 +150,7 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: false,
     mini: false,
-    images: ['/images/escargot-1.jpg', '/images/escargot-2.jpg'],
+    images: [],
     description:
       'Знаменитая «улиточная» бегония — листья закручиваются у основания плотной спиралью, напоминая раковину улитки. Серебристо-зелёная листва с тёмным спиральным рисунком.',
     careInstructions:
@@ -179,7 +179,7 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: false,
     mini: false,
-    images: ['/images/luxurians-1.jpg', '/images/luxurians-2.jpg'],
+    images: [],
     description:
       'Необычная пальмовидная бегония с узкими пальчатыми листьями, собранными в зонтик на верхушке стебля. Внешне напоминает миниатюрную пальму. Быстрорастущий вид, в комнатных условиях достигает 1 м.',
     careInstructions:
@@ -208,7 +208,7 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: true,
     mini: false,
-    images: ['/images/brevirimosa-1.jpg', '/images/brevirimosa-2.jpg'],
+    images: [],
     description:
       'Роскошная видовая бегония из Папуа — Новой Гвинеи с крупными удлинёнными листьями, покрытыми ярко-розовыми пятнами на тёмно-зелёном фоне. Настоящий коллекционный экземпляр.',
     careInstructions:
@@ -237,7 +237,7 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: false,
     mini: false,
-    images: ['/images/ds-lunnyj-svet-1.jpg', '/images/ds-lunnyj-svet-2.jpg'],
+    images: [],
     description:
       'Серия DS от российского селекционера Дмитрия Сафонова. Крупные серебристо-белые листья с нежным перламутровым отливом и тонкой зелёной каймой. Очень нарядный и при этом устойчивый сорт.',
     careInstructions:
@@ -266,7 +266,7 @@ export const products: Product[] = [
     iridescent: true,
     terrarium: false,
     mini: true,
-    images: ['/images/silver-limbo-1.jpg', '/images/silver-limbo-2.jpg'],
+    images: [],
     description:
       'Компактная рексовая бегония с мерцающими серебристыми листьями. При изменении угла освещения поверхность листа играет перламутровыми переливами от розового до голубого. Миниатюрный сорт — идеален для полок.',
     careInstructions:
@@ -295,7 +295,7 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: false,
     mini: false,
-    images: ['/images/maculata-1.jpg', '/images/maculata-2.jpg'],
+    images: [],
     description:
       'Бегония в горошек — один из самых узнаваемых сортов в мире. Удлинённые листья с серебристыми крапинками на тёмно-зелёном фоне и эффектной бордовой изнанкой. Тростниковый тип — растёт вертикально.',
     careInstructions:
@@ -324,7 +324,7 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: true,
     mini: true,
-    images: ['/images/listada-1.jpg', '/images/listada-2.jpg'],
+    images: [],
     description:
       'Миниатюрная ризоматозная бегония с бархатистыми тёмно-зелёными листьями и яркой салатовой полосой по центральной жилке. Идеальный кандидат для террариумов и флорариумов.',
     careInstructions:
@@ -383,7 +383,7 @@ export const products: Product[] = [
     iridescent: false,
     terrarium: true,
     mini: false,
-    images: ['/images/darthvaderiana-1.jpg', '/images/darthvaderiana-2.jpg'],
+    images: [],
     description:
       'Одна из самых дорогих и желанных бегоний в мире. Крупные почти чёрные бархатные листья с контрастными светлыми прожилками. Открыта на Борнео в 2013 году и до сих пор крайне редка в культуре.',
     careInstructions:
@@ -412,7 +412,7 @@ export const products: Product[] = [
     iridescent: true,
     terrarium: false,
     mini: false,
-    images: ['/images/pavlinij-hvost-1.jpg', '/images/pavlinij-hvost-2.jpg'],
+    images: [],
     description:
       'Рексовая бегония с радужными переливами — зелёные, серебристые, розовые и фиолетовые зоны чередуются, как перья павлина. Неприхотливый сорт, отлично подходит для первого знакомства с бегониями.',
     careInstructions:

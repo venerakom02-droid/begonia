@@ -4,8 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import type { Product } from "@/lib/data";
 
-const PHOTO_SLUGS = new Set(["ds-rozhdenie-ognya"]);
-
 /* ── Emoji / gradient maps ── */
 const SLUG_EMOJI: Record<string, string> = {
   fireworks: "\u{1F386}", "iron-cross": "\u2720\uFE0F", escargot: "\u{1F300}", luxurians: "\u{1F334}",
@@ -68,7 +66,7 @@ export default function ProductDetailClient({ product, similar, typeLabel }: Pro
             <div
               className={`aspect-square w-full bg-gradient-to-br ${gradient} flex items-center justify-center border border-leaf/20 overflow-hidden`}
             >
-              {PHOTO_SLUGS.has(product.slug) ? (
+              {product.images[0] ? (
                 <img
                   src={product.images[0]}
                   alt={product.nameRu}
@@ -383,7 +381,7 @@ function SimilarProducts({ similar }: { similar: Product[] }) {
               >
                 {/* Image area */}
                 <div className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${gr}`}>
-                  {PHOTO_SLUGS.has(p.slug) ? (
+                  {p.images[0] ? (
                     <img
                       src={p.images[0]}
                       alt={p.nameRu}
