@@ -61,11 +61,13 @@ export default function AboutPage() {
       {/* ── Personal story ── */}
       <section className="mx-auto max-w-6xl px-6 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left — gradient visual placeholder */}
-          <div className="aspect-[4/5] rounded-sm bg-gradient-to-br from-moss via-forest to-sage flex items-end p-8">
-            <p className="text-cream/20 text-xs uppercase tracking-[2px]">
-              Фото коллекции
-            </p>
+          {/* Left — owner photo */}
+          <div className="aspect-[4/5] rounded-sm overflow-hidden border border-gold/15 bg-forest/40">
+            <img
+              src="/venera.jpg"
+              alt="Венера — основатель коллекции БегоНия Venus"
+              className="w-full h-full object-cover"
+            />
           </div>
           {/* Right — text */}
           <div>
