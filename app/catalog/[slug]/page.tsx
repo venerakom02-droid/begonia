@@ -1,5 +1,5 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { products } from "@/lib/data";
 import ProductDetailClient from "./ProductDetailClient";
 
@@ -9,13 +9,51 @@ export function generateStaticParams() {
 }
 
 /* ── Metadata ── */
-export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata(
+  props: { params: Promise<{ slug: string }> },
+): Promise<Metadata> {
   const { slug } = await props.params;
   const product = products.find((p) => p.slug === slug);
-  if (!product) return { title: "Сорт не найден — БегоНия Venus" };
+  if (!product) {
+    return {
+      title: "Сорт не найден",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const description = product.description.slice(0, 160);
+  const url = `/catalog/${product.slug}`;
+  const image = product.images[0];
+
   return {
-    title: `${product.nameRu} — БегоНия Venus`,
-    description: product.description.slice(0, 160),
+    title: `${product.nameRu} — ${product.nameLatin}`,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      url,
+      title: `${product.nameRu} — ${product.nameLatin}`,
+      description,
+      siteName: "БегоНия Venus",
+      ...(image
+        ? {
+            images: [
+              {
+                url: image,
+                width: 1200,
+                height: 1200,
+                alt: `Бегония «${product.nameRu}» (${product.nameLatin})`,
+              },
+            ],
+          }
+        : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.nameRu} — ${product.nameLatin}`,
+      description,
+      ...(image ? { images: [image] } : {}),
+    },
   };
 }
 
