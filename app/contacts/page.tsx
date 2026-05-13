@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CONTACTS, SOCIAL_LINKS } from "@/lib/contacts";
+import { CONTACTS, SOCIAL_LINKS, SELLER } from "@/lib/contacts";
 
 export const metadata: Metadata = {
   title: "Контакты — БегоНия Venus | Свяжитесь с нами",
@@ -217,6 +217,72 @@ export default function ContactsPage() {
               Оформить предзаказ
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── Реквизиты продавца ── */}
+      <section className="mx-auto max-w-3xl px-6">
+        <div className="border border-gold/15 bg-forest/30 p-6 sm:p-8 rounded-sm">
+          <h2
+            className="text-cream text-xl mb-5"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Реквизиты <span className="text-gold">продавца</span>
+          </h2>
+          <dl className="grid grid-cols-1 sm:grid-cols-3 gap-y-3 gap-x-6 text-sm">
+            <dt className="text-cream/40 uppercase tracking-[1.5px] text-xs">
+              Продавец
+            </dt>
+            <dd className="text-cream sm:col-span-2">
+              {SELLER.legalForm} {SELLER.fullName}
+            </dd>
+
+            <dt className="text-cream/40 uppercase tracking-[1.5px] text-xs">
+              ИНН
+            </dt>
+            <dd className="text-cream sm:col-span-2">{SELLER.inn}</dd>
+
+            <dt className="text-cream/40 uppercase tracking-[1.5px] text-xs">
+              Налоговый режим
+            </dt>
+            <dd className="text-cream sm:col-span-2">{SELLER.taxRegime}</dd>
+
+            <dt className="text-cream/40 uppercase tracking-[1.5px] text-xs">
+              Email
+            </dt>
+            <dd className="sm:col-span-2">
+              <a
+                href={`mailto:${CONTACTS.email}`}
+                className="text-gold hover:text-gold-light transition-colors duration-300"
+              >
+                {CONTACTS.email}
+              </a>
+            </dd>
+
+            <dt className="text-cream/40 uppercase tracking-[1.5px] text-xs">
+              Телефон
+            </dt>
+            <dd className="sm:col-span-2">
+              <a
+                href={`tel:+${CONTACTS.phone}`}
+                className="text-gold hover:text-gold-light transition-colors duration-300"
+              >
+                {CONTACTS.phoneDisplay}
+              </a>
+            </dd>
+          </dl>
+
+          <p className="text-cream/40 text-xs mt-6 leading-relaxed">
+            Принимая условия оформления заказа, вы соглашаетесь с{" "}
+            <Link href="/offer" className="text-gold hover:text-gold-light">
+              Публичной офертой
+            </Link>{" "}
+            и{" "}
+            <Link href="/privacy" className="text-gold hover:text-gold-light">
+              Политикой конфиденциальности
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </div>

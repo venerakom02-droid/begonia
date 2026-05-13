@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SOCIAL_LINKS, CONTACTS } from "@/lib/contacts";
+import { SOCIAL_LINKS, CONTACTS, SELLER } from "@/lib/contacts";
 
 const CATALOG_LINKS = [
   { href: "/catalog?type=rex", label: "Рексы" },
@@ -149,16 +149,25 @@ export default function Footer() {
 
       {/* ── Bottom bar ── */}
       <div className="border-t border-leaf/10">
-        <div className="mx-auto max-w-7xl px-6 py-5 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
-          <p className="text-cream/25 text-xs tracking-wide">
-            &copy; 2026 БегоНия Venus. Все права защищены.
-          </p>
-          <Link
-            href="/privacy"
-            className="text-cream/25 text-xs tracking-wide hover:text-cream/50 transition-colors duration-300"
-          >
-            Политика конфиденциальности
-          </Link>
+        <div className="mx-auto max-w-7xl px-6 py-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:items-start">
+          <div className="text-cream/25 text-xs tracking-wide text-center sm:text-left space-y-1">
+            <p>&copy; 2026 БегоНия Venus. Все права защищены.</p>
+            <p>{SELLER.short}</p>
+          </div>
+          <div className="flex gap-4">
+            <Link
+              href="/privacy"
+              className="text-cream/25 text-xs tracking-wide hover:text-cream/50 transition-colors duration-300"
+            >
+              Политика конфиденциальности
+            </Link>
+            <Link
+              href="/offer"
+              className="text-cream/25 text-xs tracking-wide hover:text-cream/50 transition-colors duration-300"
+            >
+              Публичная оферта
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -237,8 +237,12 @@ function PreorderForm() {
               className="mt-1 accent-gold"
             />
             <span className="text-cream/45 text-xs leading-relaxed">
-              Соглашаюсь с обработкой персональных данных согласно
-              <Link href="/privacy" className="text-gold ml-1 hover:underline">
+              Соглашаюсь с условиями&nbsp;
+              <Link href="/offer" className="text-gold hover:underline">
+                публичной оферты
+              </Link>
+              &nbsp;и обработкой персональных данных согласно&nbsp;
+              <Link href="/privacy" className="text-gold hover:underline">
                 политике конфиденциальности
               </Link>
               .
