@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CONTACTS, SELLER } from "@/lib/contacts";
 
 export const metadata: Metadata = {
-  title: "Политика конфиденциальности — БегоНия Venus",
+  title: "Политика конфиденциальности",
   description:
     "Политика обработки персональных данных интернет-магазина БегоНия Venus в соответствии с Федеральным законом 152-ФЗ.",
 };

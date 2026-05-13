@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CONTACTS, SELLER } from "@/lib/contacts";
 
 export const metadata: Metadata = {
-  title: "Публичная оферта — БегоНия Venus",
+  title: "Публичная оферта",
   description:
     "Условия покупки и доставки растений в интернет-магазине «БегоНия Venus». Договор розничной купли-продажи.",
 };

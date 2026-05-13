@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SOCIAL_LINKS } from "@/lib/contacts";
 
 export const metadata: Metadata = {
-  title: "О нас — БегоНия Venus | Коллекция декоративнолиственных бегоний",
+  title: "О нас — коллекция декоративнолиственных бегоний",
   description:
     "Венера из Оренбургской области собирает декоративнолиственные бегонии 6 лет. В коллекции 170+ сортов, отправляем по всей России.",
 };
