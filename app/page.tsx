@@ -83,11 +83,11 @@ export default function Home() {
           {/* Right stats (hidden on mobile) */}
           <div className="hidden md:flex gap-12 pb-2">
             <div className="text-right">
-              <span className="block font-display text-4xl text-gold-light">180+</span>
+              <span className="block font-display text-4xl text-gold-light">170+</span>
               <span className="text-[10px] tracking-[2px] uppercase text-cream/50">сортов</span>
             </div>
             <div className="text-right">
-              <span className="block font-display text-4xl text-gold-light">2400+</span>
+              <span className="block font-display text-4xl text-gold-light">200+</span>
               <span className="text-[10px] tracking-[2px] uppercase text-cream/50">отправок</span>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
               <span className="mx-4 w-1 h-1 rounded-full bg-gold/50 inline-block" />
               <span>Доставка по России</span>
               <span className="mx-4 w-1 h-1 rounded-full bg-gold/50 inline-block" />
-              <span>180+ Сортов</span>
+              <span>170+ Сортов</span>
               <span className="mx-4 w-1 h-1 rounded-full bg-gold/50 inline-block" />
               <span>Гарантия живого товара</span>
               <span className="mx-4 w-1 h-1 rounded-full bg-gold/50 inline-block" />
@@ -320,7 +320,7 @@ export default function Home() {
 
               {/* Accent box */}
               <div className="absolute top-4 -right-4 md:-right-8 bg-night/90 border border-gold/30 px-5 py-3 z-20 backdrop-blur-sm">
-                <span className="block font-display text-2xl text-gold">180+</span>
+                <span className="block font-display text-2xl text-gold">170+</span>
                 <span className="text-[9px] tracking-[2px] uppercase text-cream/50">сортов в коллекции</span>
               </div>
               {/* Gold line */}
@@ -339,7 +339,7 @@ export default function Home() {
               <em className="text-gold-light not-italic">восхищения</em>&raquo;
             </blockquote>
             <p className="text-[13px] text-cream/60 leading-relaxed mb-8 max-w-[460px]">
-              Более 7 лет мы собираем редкие и коллекционные сорта
+              Более 6 лет мы собираем редкие и коллекционные сорта
               декоративнолиственных бегоний. Наша оранжерея — это место, где
               каждое растение получает индивидуальный уход, правильный субстрат и
               оптимальные условия для роста. Мы отправляем только здоровые,
