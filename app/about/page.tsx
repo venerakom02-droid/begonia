@@ -1,41 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SOCIAL_LINKS } from "@/lib/contacts";
 
 export const metadata: Metadata = {
   title: "О нас — БегоНия Venus | Коллекция декоративнолиственных бегоний",
   description:
-    "История коллекции БегоНия Venus: 7+ лет опыта, 180+ сортов, 2400+ отправок. Узнайте о нашей страсти к редким бегониям и философии бережного ухода.",
+    "Венера из Кувандыка собирает декоративнолиственные бегонии 6 лет. В коллекции 170+ сортов, отправляем по всей России.",
 };
 
-/* placeholder:sections filled below */
-
 const TIMELINE = [
-  { year: "2018", text: "Первая бегония в коллекции — начало пути" },
-  { year: "2020", text: "Первые продажи и отправки по России" },
-  { year: "2022", text: "Коллекция превысила 200 сортов" },
-  { year: "2024", text: "2 400+ успешных отправок" },
-  { year: "2026", text: "Запуск БегоНия Venus — онлайн-магазин коллекции" },
+  { year: "2020", text: "Целенаправленно заказала первые бегонии и не смогла устоять перед разнообразием окрасок листьев." },
+  { year: "2022", text: "Коллекция разрослась до нескольких десятков сортов, начались первые обмены с коллекционерами." },
+  { year: "2024", text: "В коллекции уже больше ста сортов. Регулярно отправляю растения по всей России." },
+  { year: "2026", text: "170+ сортов и запуск БегоНия Venus — собственного онлайн-магазина." },
 ];
 
 const VALUES = [
   {
     title: "Качество",
     icon: "✦",
-    text: "Каждое растение выращено с любовью, прошло карантин и адаптировано к домашним условиям. Мы отправляем только здоровые экземпляры.",
+    text: "Каждое растение выращено мной лично, прошло акклиматизацию и проверку. Отправляю только здоровые экземпляры, с которыми сама готова работать дальше.",
   },
   {
     title: "Забота",
     icon: "❋",
-    text: "Бережная упаковка, термозащита, подробные инструкции по уходу — мы сопровождаем каждое растение от теплицы до вашего подоконника.",
+    text: "Бережная упаковка, термозащита в холодное время года, подробные инструкции по уходу. Сопровождаю растение от теплицы до вашего подоконника.",
   },
   {
-    title: "Сообщество",
+    title: "Знание",
     icon: "✿",
-    text: "Более 3 000 коллекционеров доверяют нам. Мы делимся знаниями, проводим консультации и объединяем любителей бегоний.",
+    text: "За 6 лет я узнала характер каждого сорта в коллекции. Помогу подобрать растение под ваши условия и подскажу, как сохранить окраску листьев.",
   },
 ];
-
-const EXHIBITIONS = ["Orchidium 2023", "Monsterium 2024", "GREEN RARE 2025"];
 
 export default function AboutPage() {
   return (
@@ -52,13 +48,12 @@ export default function AboutPage() {
           className="text-cream text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          О коллекции Bego
-          <span className="text-gold">Nia</span>
+          БегоНия&nbsp;<span className="text-gold">Venus</span>
         </h1>
         <p className="text-cream/50 max-w-2xl mx-auto leading-relaxed">
-          Редкие декоративнолиственные бегонии, выращенные с любовью и знанием
-          дела. Более 7 лет мы собираем, размножаем и бережно доставляем
-          уникальные сорта коллекционерам по всей России.
+          Частная коллекция декоративнолиственных бегоний. Шесть лет я бережно
+          собираю и размножаю сорта, которые цепляют своей окраской и
+          характером листа. Отправляю растения по всей России.
         </p>
         <div className="gold-line mt-10" />
       </section>
@@ -82,31 +77,31 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-cream/60 leading-relaxed text-sm">
               <p>
-                Моя коллекция началась с одного невзрачного листочка Rex-бегонии,
-                подаренного бабушкой. С тех пор прошло более{" "}
-                <span className="text-cream">7 лет</span>, и сегодня в моей
-                теплице живут{" "}
-                <span className="text-cream">180+ сортов и видов</span>{" "}
-                декоративнолиственных бегоний.
+                Я живу в Кувандыке. Шесть лет назад целенаправленно заказала
+                первые декоративнолиственные бегонии — и не смогла устоять
+                перед разнообразием окрасок и рисунка их листьев.
               </p>
               <p>
-                Каждый сорт — это история: месяцы поиска, обмены с
-                коллекционерами из разных стран, кропотливое размножение и
-                адаптация. Я знаю особенности каждого растения и готова поделиться
-                этими знаниями.
+                С тех пор коллекция выросла до{" "}
+                <span className="text-cream">170+ сортов и видов</span>. Каждый
+                сорт — отдельная история: поиск, обмен с другими
+                коллекционерами, кропотливое размножение и адаптация к домашним
+                условиям.
               </p>
               <p>
-                За годы работы я отправила более{" "}
-                <span className="text-cream">2 400 растений</span> по всей
-                России — от Калининграда до Владивостока. Каждая посылка
-                упакована так, словно я отправляю её себе.
+                Я знаю характер каждого растения в коллекции. И отправляю
+                только те экземпляры, с которыми сама готова работать дальше —
+                здоровые, акклиматизированные, с понятным сортом.
+              </p>
+              <p className="text-cream/80 italic">
+                Бегонии — моё вдохновение и спасение в трудную минуту.
               </p>
             </div>
             <div className="flex gap-8 mt-8">
               {[
-                { num: "7+", label: "лет опыта" },
-                { num: "180+", label: "сортов" },
-                { num: "2 400+", label: "отправок" },
+                { num: "6", label: "лет с бегониями" },
+                { num: "170+", label: "сортов в коллекции" },
+                { num: "Кувандык", label: "откуда отправляем" },
               ].map((s) => (
                 <div key={s.label}>
                   <span
@@ -165,33 +160,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Gallery placeholder ── */}
-      <section className="mx-auto max-w-6xl px-6 mb-24">
-        <h2
-          className="text-cream text-3xl text-center mb-10"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          Наша <span className="text-gold">теплица</span>
-        </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            "from-moss to-forest",
-            "from-sage to-moss",
-            "from-forest to-sage",
-            "from-moss to-night",
-          ].map((grad, i) => (
-            <div
-              key={i}
-              className={`aspect-square rounded-sm bg-gradient-to-br ${grad} flex items-end justify-center p-4`}
-            >
-              <span className="text-cream/15 text-xs uppercase tracking-[2px]">
-                Фото {i + 1}
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ── Values ── */}
       <section className="mx-auto max-w-6xl px-6 mb-24">
         <h2
@@ -219,27 +187,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Exhibition badges ── */}
-      <section className="mx-auto max-w-4xl px-6 mb-24 text-center">
-        <p
-          className="text-gold uppercase tracking-[3px] mb-6"
-          style={{ fontSize: "11px" }}
-        >
-          Участник выставок
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          {EXHIBITIONS.map((ex) => (
-            <span
-              key={ex}
-              className="px-6 py-3 border border-gold/25 text-cream/70 uppercase tracking-[2px] rounded-sm"
-              style={{ fontSize: "11px" }}
-            >
-              {ex}
-            </span>
-          ))}
-        </div>
-      </section>
-
       {/* ── CTA ── */}
       <section className="mx-auto max-w-3xl px-6 text-center">
         <div className="gold-line mb-12" />
@@ -250,22 +197,29 @@ export default function AboutPage() {
           Следите за <span className="text-gold">коллекцией</span>
         </h2>
         <p className="text-cream/50 text-sm mb-8 max-w-lg mx-auto">
-          Новые сорта, закулисье теплицы, советы по уходу — подписывайтесь на
-          наши каналы, чтобы не пропустить обновления.
+          Новые сорта, закулисье теплицы, советы по уходу — подписывайтесь,
+          чтобы не пропустить обновления.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="#"
+            href={SOCIAL_LINKS.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
           >
             Telegram-канал
           </a>
           <a
-            href="#"
+            href={SOCIAL_LINKS.youtube}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-ghost"
           >
-            Группа VK
+            YouTube
           </a>
+          <Link href="/catalog" className="btn-ghost">
+            Каталог сортов
+          </Link>
         </div>
       </section>
     </div>
